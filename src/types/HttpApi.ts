@@ -6,6 +6,7 @@ import type { HttpApiCredentialsSetting } from './HttpApiCredentialsSetting';
 import type { HttpMethod } from './HttpMethod';
 import type { HttpResponseType } from './HttpResponseType';
 
+/** An HTTP API description */
 export interface HttpApi<
   ReqHeadersT extends Record<string, AnyStringSerializableType>,
   ReqParamsT extends Record<string, AnyStringSerializableType>,
@@ -19,7 +20,8 @@ export interface HttpApi<
   ErrResBodyT
 > extends Api<ReqHeadersT, ReqParamsT, ReqQueryT, ReqBodyT, ResStatusT, ResHeadersT, ResBodyT, ErrResStatusT, ErrResHeadersT, ErrResBodyT> {
   method: HttpMethod;
-  /** The URL for accessing this API, which may be relative to a URL base configuring for the `routeType` */
+  /** The URL for accessing this API, which may be relative to a URL base configuring for the `routeType`.  Use `{…}` syntax to mark
+   * parameters, as you might with Express. */
   url: string;
 
   /**

@@ -4,6 +4,7 @@ import type { AnyStringSerializableType } from './AnyStringSerializableType';
 import type { ApiSchemas } from './ApiSchemas';
 import type { CachePolicy } from './CachePolicy';
 
+/** A generic API description.  See `HttpApi` */
 export interface Api<
   ReqHeadersT extends Record<string, AnyStringSerializableType>,
   ReqParamsT extends Record<string, AnyStringSerializableType>,

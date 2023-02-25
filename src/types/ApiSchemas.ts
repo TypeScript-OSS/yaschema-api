@@ -4,6 +4,7 @@ import type { AnyStringSerializableType } from './AnyStringSerializableType';
 import type { RequestSchemas } from './RequestSchemas';
 import type { ResponseSchemas } from './ResponseSchemas';
 
+/** Api schemas used for requests and responses */
 export interface ApiSchemas<
   ReqHeadersT extends Record<string, AnyStringSerializableType>,
   ReqParamsT extends Record<string, AnyStringSerializableType>,

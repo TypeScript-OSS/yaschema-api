@@ -2,6 +2,7 @@ import type { Schema, SingleOrArray } from 'yaschema';
 
 import type { AnyStringSerializableType } from './AnyStringSerializableType';
 
+/** Schemas used for requests */
 export interface RequestSchemas<
   HeadersT extends Record<string, AnyStringSerializableType>,
   ParamsT extends Record<string, AnyStringSerializableType>,

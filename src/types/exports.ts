@@ -2,6 +2,8 @@ export * from './AnyStringSerializableType';
 export * from './Api';
 export * from './ApiSchemas';
 export * from './CachePolicy';
+export * from './GenericApi';
+export * from './GenericHttpApi';
 export * from './HttpApi';
 export * from './HttpApiCredentialsSetting';
 export * from './HttpMethod';

@@ -14,7 +14,10 @@
 <ul class="tsd-breadcrumb">
 <li><a href="../modules.html">yaschema-api</a></li>
 <li><a href="Api.html">Api</a></li></ul>
-<h1>Interface Api&lt;ReqHeadersT, ReqParamsT, ReqQueryT, ReqBodyT, ResStatusT, ResHeadersT, ResBodyT, ErrResStatusT, ErrResHeadersT, ErrResBodyT&gt;</h1></div> 
+<h1>Interface Api&lt;ReqHeadersT, ReqParamsT, ReqQueryT, ReqBodyT, ResStatusT, ResHeadersT, ResBodyT, ErrResStatusT, ErrResHeadersT, ErrResBodyT&gt;</h1></div>
+<section class="tsd-panel tsd-comment">
+<div class="tsd-comment tsd-typography"><p>A generic API description.  See <code>HttpApi</code></p>
+</div></section> 
 <section class="tsd-panel tsd-type-parameters">
 <h4>Type Parameters</h4>
 <ul class="tsd-type-parameters">
@@ -45,7 +48,7 @@
 <ul class="tsd-hierarchy">
 <li><a href="HttpApi.html" class="tsd-signature-type" data-tsd-kind="Interface">HttpApi</a></li></ul></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in types/Api.ts:7</li></ul></aside>
+<li>Defined in <a href="https://github.com/Passfolio/yaschema-api/blob/18f0aef/src/types/Api.ts#L8">types/Api.ts:8</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -68,7 +71,7 @@
 <h3>Default Value</h3><p><code>{ canCache: false }</code></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in types/Api.ts:40</li></ul></aside></section>
+<li>Defined in <a href="https://github.com/Passfolio/yaschema-api/blob/18f0aef/src/types/Api.ts#L41">types/Api.ts:41</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="isSafeToRetry" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>is<wbr/>Safe<wbr/>To<wbr/>Retry</span><a href="#isSafeToRetry" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">is<wbr/>Safe<wbr/>To<wbr/>Retry<span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -77,19 +80,19 @@
 <h3>Default Value</h3><p><code>false</code></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in types/Api.ts:46</li></ul></aside></section>
+<li>Defined in <a href="https://github.com/Passfolio/yaschema-api/blob/18f0aef/src/types/Api.ts#L47">types/Api.ts:47</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="routeType" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>route<wbr/>Type</span><a href="#routeType" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">route<wbr/>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 <div class="tsd-comment tsd-typography"><p>The type of route, which will be used to select a URL base and is configurable using <code>setUrlBaseForRouteType</code></p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in types/Api.ts:33</li></ul></aside></section>
+<li>Defined in <a href="https://github.com/Passfolio/yaschema-api/blob/18f0aef/src/types/Api.ts#L34">types/Api.ts:34</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="schemas" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>schemas</span><a href="#schemas" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">schemas<span class="tsd-signature-symbol">:</span> <a href="ApiSchemas.html" class="tsd-signature-type" data-tsd-kind="Interface">ApiSchemas</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">ReqHeadersT</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">ReqParamsT</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">ReqQueryT</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">ReqBodyT</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">ResStatusT</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">ResHeadersT</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">ResBodyT</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">ErrResStatusT</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">ErrResHeadersT</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">ErrResBodyT</span><span class="tsd-signature-symbol">&gt;</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in types/Api.ts:19</li></ul></aside></section></section></div>
+<li>Defined in <a href="https://github.com/Passfolio/yaschema-api/blob/18f0aef/src/types/Api.ts#L20">types/Api.ts:20</a></li></ul></aside></section></section></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 <div class="tsd-navigation settings">
 <details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
