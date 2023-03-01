@@ -1,7 +1,9 @@
-import type { AnyStringSerializableType } from './AnyStringSerializableType';
-import type { OptionalIfUnknown } from './OptionalIfUnknown';
+import type { AnyBody } from './AnyBody';
+import type { AnyHeaders } from './AnyHeaders';
+import type { AnyStatus } from './AnyStatus';
+import type { OptionalIfPossiblyUndefined } from './OptionalIfPossiblyUndefined';
 
-export type ApiResponse<StatusT extends number, HeadersT extends Record<string, AnyStringSerializableType>, BodyT> = {
+export type ApiResponse<StatusT extends AnyStatus, HeadersT extends AnyHeaders, BodyT extends AnyBody> = {
   status: StatusT;
-} & OptionalIfUnknown<'headers', HeadersT> &
-  OptionalIfUnknown<'body', BodyT>;
+} & OptionalIfPossiblyUndefined<'headers', HeadersT> &
+  OptionalIfPossiblyUndefined<'body', BodyT>;

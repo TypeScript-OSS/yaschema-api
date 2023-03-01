@@ -1,3 +1,8 @@
+export * from './AnyBody';
+export * from './AnyHeaders';
+export * from './AnyParams';
+export * from './AnyQuery';
+export * from './AnyStatus';
 export * from './AnyStringSerializableType';
 export * from './Api';
 export * from './ApiRequest';
@@ -12,6 +17,6 @@ export * from './HttpApi';
 export * from './HttpApiCredentialsSetting';
 export * from './HttpMethod';
 export * from './HttpResponseType';
-export * from './OptionalIfUnknown';
+export * from './OptionalIfPossiblyUndefined';
 export * from './RequestSchemas';
 export * from './ResponseSchemas';

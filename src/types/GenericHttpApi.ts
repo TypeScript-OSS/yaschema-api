@@ -1,17 +1,19 @@
-import type { SingleOrArray } from 'yaschema';
-
-import type { AnyStringSerializableType } from './AnyStringSerializableType';
+import type { AnyBody } from './AnyBody';
+import type { AnyHeaders } from './AnyHeaders';
+import type { AnyParams } from './AnyParams';
+import type { AnyQuery } from './AnyQuery';
+import type { AnyStatus } from './AnyStatus';
 import type { HttpApi } from './HttpApi';
 
 export type GenericHttpApi = HttpApi<
-  Record<string, AnyStringSerializableType>,
-  Record<string, AnyStringSerializableType>,
-  Record<string, SingleOrArray<AnyStringSerializableType>>,
-  any,
-  number,
-  Record<string, AnyStringSerializableType>,
-  any,
-  number,
-  Record<string, AnyStringSerializableType>,
-  any
+  AnyHeaders,
+  AnyParams,
+  AnyQuery,
+  AnyBody,
+  AnyStatus,
+  AnyHeaders,
+  AnyBody,
+  AnyStatus,
+  AnyHeaders,
+  AnyBody
 >;

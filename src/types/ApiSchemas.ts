@@ -1,21 +1,23 @@
-import type { SingleOrArray } from 'yaschema';
-
-import type { AnyStringSerializableType } from './AnyStringSerializableType';
+import type { AnyBody } from './AnyBody';
+import type { AnyHeaders } from './AnyHeaders';
+import type { AnyParams } from './AnyParams';
+import type { AnyQuery } from './AnyQuery';
+import type { AnyStatus } from './AnyStatus';
 import type { RequestSchemas } from './RequestSchemas';
 import type { ResponseSchemas } from './ResponseSchemas';
 
 /** Api schemas used for requests and responses */
 export interface ApiSchemas<
-  ReqHeadersT extends Record<string, AnyStringSerializableType>,
-  ReqParamsT extends Record<string, AnyStringSerializableType>,
-  ReqQueryT extends Record<string, SingleOrArray<AnyStringSerializableType>>,
-  ReqBodyT,
-  ResStatusT extends number,
-  ResHeadersT extends Record<string, AnyStringSerializableType>,
-  ResBodyT,
-  ErrResStatusT extends number,
-  ErrResHeadersT extends Record<string, AnyStringSerializableType>,
-  ErrResBodyT
+  ReqHeadersT extends AnyHeaders,
+  ReqParamsT extends AnyParams,
+  ReqQueryT extends AnyQuery,
+  ReqBodyT extends AnyBody,
+  ResStatusT extends AnyStatus,
+  ResHeadersT extends AnyHeaders,
+  ResBodyT extends AnyBody,
+  ErrResStatusT extends AnyStatus,
+  ErrResHeadersT extends AnyHeaders,
+  ErrResBodyT extends AnyBody
 > {
   request: RequestSchemas<ReqHeadersT, ReqParamsT, ReqQueryT, ReqBodyT>;
   successResponse: ResponseSchemas<ResStatusT, ResHeadersT, ResBodyT>;

@@ -1,6 +1,9 @@
-import type { DeserializationResult, SerializationResult, SingleOrArray, ValidationMode } from 'yaschema';
+import type { DeserializationResult, SerializationResult, ValidationMode } from 'yaschema';
 
-import type { AnyStringSerializableType } from '../types/AnyStringSerializableType';
+import type { AnyBody } from '../types/AnyBody';
+import type { AnyHeaders } from '../types/AnyHeaders';
+import type { AnyParams } from '../types/AnyParams';
+import type { AnyQuery } from '../types/AnyQuery';
 import type { GenericApiRequest } from '../types/GenericApiRequest';
 
 /** Determines request schema validation results and conceptually returns one of three states: valid, invalid (soft validation error), or
@@ -12,10 +15,10 @@ export const checkRequestValidation = ({
   reqBody,
   validationMode
 }: {
-  reqHeaders: SerializationResult | DeserializationResult<Partial<Record<string, AnyStringSerializableType>>>;
-  reqParams: SerializationResult | DeserializationResult<Partial<Record<string, AnyStringSerializableType>>>;
-  reqQuery: SerializationResult | DeserializationResult<Partial<Record<string, SingleOrArray<AnyStringSerializableType>>>>;
-  reqBody: SerializationResult | DeserializationResult<any>;
+  reqHeaders: SerializationResult | DeserializationResult<Partial<AnyHeaders>>;
+  reqParams: SerializationResult | DeserializationResult<Partial<AnyParams>>;
+  reqQuery: SerializationResult | DeserializationResult<Partial<AnyQuery>>;
+  reqBody: SerializationResult | DeserializationResult<AnyBody>;
   validationMode: ValidationMode;
 }):
   | ({ ok: true } & (

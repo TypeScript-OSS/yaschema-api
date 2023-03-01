@@ -1,13 +1,9 @@
-import type { SingleOrArray } from 'yaschema';
-
-import type { AnyStringSerializableType } from '../types/AnyStringSerializableType';
+import type { AnyBody } from '../types/AnyBody';
+import type { AnyHeaders } from '../types/AnyHeaders';
+import type { AnyParams } from '../types/AnyParams';
+import type { AnyQuery } from '../types/AnyQuery';
 import type { RequestSchemas } from '../types/RequestSchemas';
 
-export const makeRequestSchemas = <
-  HeadersT extends Record<string, AnyStringSerializableType>,
-  ParamsT extends Record<string, AnyStringSerializableType>,
-  QueryT extends Record<string, SingleOrArray<AnyStringSerializableType>>,
-  BodyT
->(
+export const makeRequestSchemas = <HeadersT extends AnyHeaders, ParamsT extends AnyParams, QueryT extends AnyQuery, BodyT extends AnyBody>(
   schemas: RequestSchemas<HeadersT, ParamsT, QueryT, BodyT>
 ) => schemas;

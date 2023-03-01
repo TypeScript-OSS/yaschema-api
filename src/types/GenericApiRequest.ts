@@ -1,11 +1,7 @@
-import type { SingleOrArray } from 'yaschema';
-
-import type { AnyStringSerializableType } from './AnyStringSerializableType';
+import type { AnyBody } from './AnyBody';
+import type { AnyHeaders } from './AnyHeaders';
+import type { AnyParams } from './AnyParams';
+import type { AnyQuery } from './AnyQuery';
 import type { ApiRequest } from './ApiRequest';
 
-export type GenericApiRequest = ApiRequest<
-  Record<string, AnyStringSerializableType>,
-  Record<string, AnyStringSerializableType>,
-  Record<string, SingleOrArray<AnyStringSerializableType>>,
-  any
->;
+export type GenericApiRequest = ApiRequest<AnyHeaders, AnyParams, AnyQuery, AnyBody>;

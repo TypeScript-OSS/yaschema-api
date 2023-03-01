@@ -1,19 +1,21 @@
-import type { SingleOrArray } from 'yaschema';
-
-import type { AnyStringSerializableType } from '../types/AnyStringSerializableType';
+import type { AnyBody } from '../types/AnyBody';
+import type { AnyHeaders } from '../types/AnyHeaders';
+import type { AnyParams } from '../types/AnyParams';
+import type { AnyQuery } from '../types/AnyQuery';
+import type { AnyStatus } from '../types/AnyStatus';
 import type { ApiSchemas } from '../types/ApiSchemas';
 
 export const makeApiSchemas = <
-  ReqHeadersT extends Record<string, AnyStringSerializableType>,
-  ReqParamsT extends Record<string, AnyStringSerializableType>,
-  ReqQueryT extends Record<string, SingleOrArray<AnyStringSerializableType>>,
-  ReqBodyT,
-  ResStatusT extends number,
-  ResHeadersT extends Record<string, AnyStringSerializableType>,
-  ResBodyT,
-  ErrResStatusT extends number,
-  ErrResHeadersT extends Record<string, AnyStringSerializableType>,
-  ErrResBodyT
+  ReqHeadersT extends AnyHeaders,
+  ReqParamsT extends AnyParams,
+  ReqQueryT extends AnyQuery,
+  ReqBodyT extends AnyBody,
+  ResStatusT extends AnyStatus,
+  ResHeadersT extends AnyHeaders,
+  ResBodyT extends AnyBody,
+  ErrResStatusT extends AnyStatus,
+  ErrResHeadersT extends AnyHeaders,
+  ErrResBodyT extends AnyBody
 >(
   schemas: ApiSchemas<
     ReqHeadersT,

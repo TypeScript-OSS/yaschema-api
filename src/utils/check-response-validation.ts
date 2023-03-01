@@ -1,17 +1,21 @@
 import type { DeserializationResult, SerializationResult, ValidationMode } from 'yaschema';
 
-import type { AnyStringSerializableType } from '../types/AnyStringSerializableType';
+import type { AnyBody } from '../types/AnyBody';
+import type { AnyHeaders } from '../types/AnyHeaders';
+import type { AnyStatus } from '../types/AnyStatus';
 import type { GenericApiResponse } from '../types/GenericApiResponse';
 
 /** Determines response schema validation results and conceptually returns one of three states: valid, invalid (soft validation error), or
  * invalid (hard validation error).  For invalid cases, additional metadata is included in the result. */
 export const checkResponseValidation = ({
+  resStatus,
   resHeaders,
   resBody,
   validationMode
 }: {
-  resHeaders: SerializationResult | DeserializationResult<Partial<Record<string, AnyStringSerializableType>>>;
-  resBody: SerializationResult | DeserializationResult<any>;
+  resStatus: SerializationResult | DeserializationResult<Partial<AnyStatus>>;
+  resHeaders: SerializationResult | DeserializationResult<Partial<AnyHeaders>>;
+  resBody: SerializationResult | DeserializationResult<Partial<AnyBody>>;
   validationMode: ValidationMode;
 }):
   | ({ ok: true } & (
@@ -19,6 +23,14 @@ export const checkResponseValidation = ({
       | { hadSoftValidationError: true; invalidPart: keyof GenericApiResponse; validationError: string }
     ))
   | { ok: false; invalidPart: keyof GenericApiResponse; validationError: string } => {
+  if (resStatus.error !== undefined) {
+    if (validationMode === 'hard') {
+      return { ok: false, invalidPart: 'status', validationError: resStatus.error };
+    } else {
+      return { ok: true, hadSoftValidationError: true, invalidPart: 'status', validationError: resStatus.error };
+    }
+  }
+
   if (resHeaders.error !== undefined) {
     if (validationMode === 'hard') {
       return { ok: false, invalidPart: 'headers', validationError: resHeaders.error };
