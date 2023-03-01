@@ -1,4 +1,4 @@
-import type { DeserializationResult, ValidationMode } from 'yaschema';
+import type { DeserializationResult, SerializationResult, ValidationMode } from 'yaschema';
 
 import type { AnyStringSerializableType } from '../types/AnyStringSerializableType';
 import type { GenericApiResponse } from '../types/GenericApiResponse';
@@ -10,8 +10,8 @@ export const checkResponseValidation = ({
   resBody,
   validationMode
 }: {
-  resHeaders: DeserializationResult<Partial<Record<string, AnyStringSerializableType>>>;
-  resBody: DeserializationResult<any>;
+  resHeaders: SerializationResult | DeserializationResult<Partial<Record<string, AnyStringSerializableType>>>;
+  resBody: SerializationResult | DeserializationResult<any>;
   validationMode: ValidationMode;
 }):
   | ({ ok: true } & (

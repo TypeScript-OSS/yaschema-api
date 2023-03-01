@@ -1,5 +1,6 @@
-import type { SerializationResult, ValidationMode } from 'yaschema';
+import type { DeserializationResult, SerializationResult, SingleOrArray, ValidationMode } from 'yaschema';
 
+import type { AnyStringSerializableType } from '../types/AnyStringSerializableType';
 import type { GenericApiRequest } from '../types/GenericApiRequest';
 
 /** Determines request schema validation results and conceptually returns one of three states: valid, invalid (soft validation error), or
@@ -11,10 +12,10 @@ export const checkRequestValidation = ({
   reqBody,
   validationMode
 }: {
-  reqHeaders: SerializationResult;
-  reqParams: SerializationResult;
-  reqQuery: SerializationResult;
-  reqBody: SerializationResult;
+  reqHeaders: SerializationResult | DeserializationResult<Partial<Record<string, AnyStringSerializableType>>>;
+  reqParams: SerializationResult | DeserializationResult<Partial<Record<string, AnyStringSerializableType>>>;
+  reqQuery: SerializationResult | DeserializationResult<Partial<Record<string, SingleOrArray<AnyStringSerializableType>>>>;
+  reqBody: SerializationResult | DeserializationResult<any>;
   validationMode: ValidationMode;
 }):
   | ({ ok: true } & (
