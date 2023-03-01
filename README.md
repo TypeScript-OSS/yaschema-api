@@ -5,7 +5,7 @@
 
 Yet another API.  Schema-first API modeling and validation for TypeScript, built on yaschema.
 
-This package is almost entirely TypeScript types, except for a few configuration functions.  Yaschema-APIs have `routeType` metadata, which is helpful for directing traffic to different sets of servers.  See `setUrlBaseForRouteType` and `setDefaultUrlBase`.
+This package is almost entirely TypeScript types, except for a few configuration functions and utilities.  Yaschema-APIs have `routeType` metadata, which is helpful for directing traffic to different sets of servers.  See `setUrlBaseForRouteType` and `setDefaultUrlBase`.
 
 Support for handling yaschema-api requests server side and for making yaschema-api requests either client or server side, is handled by other packages.
 
