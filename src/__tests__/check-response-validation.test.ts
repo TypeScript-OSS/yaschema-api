@@ -1,4 +1,5 @@
 import { schema } from 'yaschema';
+
 import { makeHttpApi } from '../type-makers/make-http-api';
 import { checkResponseValidation } from '../utils/check-response-validation';
 
@@ -40,6 +41,7 @@ describe('checkResponseValidation', () => {
     const schemas = api.schemas.successResponse;
     const [resStatus, resHeaders, resBody] = await Promise.all([
       (schemas.status ?? anyResStatusSchema).serializeAsync(res.status, { validation: 'hard' }),
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       (schemas.headers ?? anyResHeadersSchema).serializeAsync(res.headers as any, { validation: 'hard' }),
       (schemas.body ?? anyResBodySchema).serializeAsync(res.body, { validation: 'hard' })
     ]);
@@ -65,7 +67,8 @@ describe('checkResponseValidation', () => {
     const schemas = api.schemas.successResponse;
     const [resStatus, resHeaders, resBody] = await Promise.all([
       (schemas.status ?? anyResStatusSchema).serializeAsync(res.status, { validation: 'hard' }),
-      (schemas.headers ?? anyResHeadersSchema).serializeAsync(res.headers as any, { validation: 'hard' }),
+      (schemas.headers ?? anyResHeadersSchema).serializeAsync(undefined, { validation: 'hard' }),
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       (schemas.body ?? anyResBodySchema).serializeAsync(res.body as any, { validation: 'hard' })
     ]);
 
