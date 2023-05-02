@@ -16,6 +16,7 @@ export * from './GenericHttpApi';
 export * from './HttpApi';
 export * from './HttpApiCredentialsSetting';
 export * from './HttpMethod';
+export * from './HttpRequestType';
 export * from './HttpResponseType';
 export * from './OptionalIfPossiblyUndefined';
 export * from './RequestSchemas';
