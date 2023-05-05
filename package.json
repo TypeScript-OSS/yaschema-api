@@ -1,6 +1,6 @@
 {
   "name": "yaschema-api",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Yet another API",
   "keywords": [
     "schema",
@@ -29,7 +29,7 @@
     "test:unit-tests": "yarn test:unit-tests: src"
   },
   "dependencies": {
-    "yaschema": "^2.1.0"
+    "yaschema": "^2.2.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.1",
