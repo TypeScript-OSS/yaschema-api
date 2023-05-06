@@ -6,8 +6,8 @@ import type { AnyStatus } from './AnyStatus';
 import type { RequestSchemas } from './RequestSchemas';
 import type { ResponseSchemas } from './ResponseSchemas';
 
-/** Api schemas used for requests and responses */
-export interface ApiSchemas<
+/** HttpApi schemas used for requests and responses */
+export interface HttpApiSchemas<
   ReqHeadersT extends AnyHeaders,
   ReqParamsT extends AnyParams,
   ReqQueryT extends AnyQuery,

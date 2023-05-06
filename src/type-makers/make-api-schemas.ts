@@ -3,7 +3,7 @@ import type { AnyHeaders } from '../types/AnyHeaders';
 import type { AnyParams } from '../types/AnyParams';
 import type { AnyQuery } from '../types/AnyQuery';
 import type { AnyStatus } from '../types/AnyStatus';
-import type { ApiSchemas } from '../types/ApiSchemas';
+import type { HttpApiSchemas } from '../types/HttpApiSchemas';
 
 export const makeApiSchemas = <
   ReqHeadersT extends AnyHeaders,
@@ -17,7 +17,7 @@ export const makeApiSchemas = <
   ErrResHeadersT extends AnyHeaders,
   ErrResBodyT extends AnyBody
 >(
-  schemas: ApiSchemas<
+  schemas: HttpApiSchemas<
     ReqHeadersT,
     ReqParamsT,
     ReqQueryT,

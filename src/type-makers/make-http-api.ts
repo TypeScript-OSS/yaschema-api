@@ -5,6 +5,12 @@ import type { AnyQuery } from '../types/AnyQuery';
 import type { AnyStatus } from '../types/AnyStatus';
 import type { HttpApi } from '../types/HttpApi';
 
+/**
+ * If name is omitted, it will be generated as:
+ * ```
+ * `HTTP ${api.routeType}:${api.method} ${api.url}`
+ * ```
+ */
 export const makeHttpApi = <
   ReqHeadersT extends AnyHeaders = undefined,
   ReqParamsT extends AnyParams = undefined,
@@ -19,8 +25,8 @@ export const makeHttpApi = <
 >(
   api: Omit<
     HttpApi<ReqHeadersT, ReqParamsT, ReqQueryT, ReqBodyT, ResStatusT, ResHeadersT, ResBodyT, ErrResStatusT, ErrResHeadersT, ErrResBodyT>,
-    'isYaschemaApi' | 'isYaschemaHttpApi'
-  >
+    'isYaschemaApi' | 'isYaschemaHttpApi' | 'name'
+  > & { name?: string }
 ): HttpApi<
   ReqHeadersT,
   ReqParamsT,
@@ -32,4 +38,4 @@ export const makeHttpApi = <
   ErrResStatusT,
   ErrResHeadersT,
   ErrResBodyT
-> => ({ ...api, isYaschemaApi: true, isYaschemaHttpApi: true });
+> => ({ ...api, name: api.name ?? `HTTP ${api.routeType}:${api.method} ${api.url}`, isYaschemaApi: true, isYaschemaHttpApi: true });
