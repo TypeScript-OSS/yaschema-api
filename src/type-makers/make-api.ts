@@ -17,5 +17,11 @@ export const makeApi = <
   ErrResHeadersT extends AnyHeaders,
   ErrResBodyT extends AnyBody
 >(
-  api: Api<ReqHeadersT, ReqParamsT, ReqQueryT, ReqBodyT, ResStatusT, ResHeadersT, ResBodyT, ErrResStatusT, ErrResHeadersT, ErrResBodyT>
-) => api;
+  api: Omit<
+    Api<ReqHeadersT, ReqParamsT, ReqQueryT, ReqBodyT, ResStatusT, ResHeadersT, ResBodyT, ErrResStatusT, ErrResHeadersT, ErrResBodyT>,
+    'isYaschemaApi'
+  >
+): Api<ReqHeadersT, ReqParamsT, ReqQueryT, ReqBodyT, ResStatusT, ResHeadersT, ResBodyT, ErrResStatusT, ErrResHeadersT, ErrResBodyT> => ({
+  ...api,
+  isYaschemaApi: true
+});

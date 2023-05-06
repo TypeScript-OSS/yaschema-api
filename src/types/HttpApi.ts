@@ -22,6 +22,8 @@ export interface HttpApi<
   ErrResHeadersT extends AnyHeaders,
   ErrResBodyT extends AnyBody
 > extends Api<ReqHeadersT, ReqParamsT, ReqQueryT, ReqBodyT, ResStatusT, ResHeadersT, ResBodyT, ErrResStatusT, ErrResHeadersT, ErrResBodyT> {
+  isYaschemaHttpApi: true;
+
   method: HttpMethod;
   /** The URL for accessing this API, which may be relative to a URL base configuring for the `routeType`.  Use `{…}` syntax to mark
    * parameters, as you might with Express. */

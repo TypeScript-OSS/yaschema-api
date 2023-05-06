@@ -19,6 +19,8 @@ export interface Api<
   ErrResHeadersT extends AnyHeaders,
   ErrResBodyT extends AnyBody
 > {
+  isYaschemaApi: true;
+
   schemas: ApiSchemas<
     ReqHeadersT,
     ReqParamsT,
