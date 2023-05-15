@@ -7,4 +7,10 @@ export interface Api {
 
   /** A name that can be used to describe this API, when logging for example */
   name: string;
+
+  /** A description, which can be used by code generation tools to generate documentation */
+  description?: string;
+
+  /** An example, which can be used by code generation tools to generate documentation */
+  example?: string;
 }
