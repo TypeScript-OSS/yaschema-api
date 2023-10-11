@@ -1,1 +1,1 @@
-export type AnyBody = any | undefined;
+export type AnyBody = any;
