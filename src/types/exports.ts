@@ -17,6 +17,7 @@ export * from './HttpApiSchemas';
 export * from './HttpMethod';
 export * from './HttpRequestType';
 export * from './HttpResponseType';
+export * from './inference/exports';
 export * from './OptionalIfPossiblyUndefined';
 export * from './RequestSchemas';
 export * from './ResponseSchemas';
