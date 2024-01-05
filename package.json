@@ -1,6 +1,6 @@
 {
   "name": "yaschema-api",
-  "version": "3.4.0",
+  "version": "3.4.1",
   "description": "Yet another API",
   "keywords": [
     "schema",
@@ -29,28 +29,28 @@
     "test:unit-tests": "yarn test:unit-tests: src"
   },
   "dependencies": {
-    "yaschema": "^3.1.0"
+    "yaschema": "^3.2.0"
   },
   "devDependencies": {
-    "@types/jest": "^29.5.10",
+    "@types/jest": "^29.5.11",
     "@types/lodash": "4.14.202",
-    "@typescript-eslint/eslint-plugin": "^6.13.2",
-    "@typescript-eslint/parser": "^6.13.2",
-    "eslint": "8.55.0",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.17.0",
+    "eslint": "8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",
-    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prefer-arrow": "^1.2.3",
-    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-prettier": "^5.1.2",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-tsdoc": "^0.2.17",
     "jest": "29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "madge": "6.1.0",
-    "prettier": "3.1.0",
+    "prettier": "3.1.1",
     "trash-cli": "5.0.0",
     "ts-jest": "^29.1.1",
-    "typedoc": "^0.25.4",
-    "typescript": "5.3.2"
+    "typedoc": "^0.25.6",
+    "typescript": "5.3.3"
   }
 }
