@@ -6,7 +6,7 @@ import { checkResponseValidation } from '../utils/check-response-validation';
 const anyStringSerializableTypeSchema = schema.oneOf3(
   schema.number().setAllowedSerializationForms(['number', 'string']),
   schema.boolean().setAllowedSerializationForms(['boolean', 'string']),
-  schema.string()
+  schema.string().allowEmptyString()
 );
 
 const anyResStatusSchema = schema.number();

@@ -6,7 +6,7 @@ import { checkRequestValidation } from '../utils/check-request-validation';
 const anyStringSerializableTypeSchema = schema.oneOf3(
   schema.number().setAllowedSerializationForms(['number', 'string']),
   schema.boolean().setAllowedSerializationForms(['boolean', 'string']),
-  schema.string()
+  schema.string().allowEmptyString()
 );
 
 const anyReqHeadersSchema = schema.record(schema.string(), anyStringSerializableTypeSchema).optional();
