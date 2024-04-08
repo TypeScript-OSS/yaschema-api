@@ -1,1 +1,1 @@
-export type HttpRequestType = 'json' | 'form-data';
+export type HttpRequestType = 'json' | 'form-data' | 'binary';
