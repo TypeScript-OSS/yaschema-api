@@ -1,5 +1,5 @@
 import type { Api } from '../types/Api';
-import { isApi } from './is-api';
+import { isApi } from './is-api.js';
 
 export const findAllApisInRoot = (root: any): Api[] => internalFindAllApisInRoot(root, 0, []);
 

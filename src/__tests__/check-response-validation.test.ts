@@ -1,7 +1,7 @@
 import { schema } from 'yaschema';
 
-import { makeHttpApi } from '../type-makers/make-http-api';
-import { checkResponseValidation } from '../utils/check-response-validation';
+import { makeHttpApi } from '../type-makers/make-http-api.js';
+import { checkResponseValidation } from '../utils/check-response-validation.js';
 
 const anyStringSerializableTypeSchema = schema.oneOf3(
   schema.number().setAllowedSerializationForms(['number', 'string']),

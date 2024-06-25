@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   preset: 'ts-jest',
   extensionsToTreatAsEsm: [".ts"],
   testEnvironment: 'jsdom',
@@ -8,6 +8,9 @@ module.exports = {
       isolatedModules: true,
       useESM: true
     }
+  },
+  moduleNameMapper: {
+    '(.+)\\.js': '$1'
   },
   coverageThreshold: {
     global: {

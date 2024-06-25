@@ -1,5 +1,5 @@
-import { makeHttpApi } from '../../type-makers/make-http-api';
-import { findAllApisInRoot } from '../find-all-apis-in-root';
+import { makeHttpApi } from '../../type-makers/make-http-api.js';
+import { findAllApisInRoot } from '../find-all-apis-in-root.js';
 
 const api1 = makeHttpApi({
   method: 'POST',
