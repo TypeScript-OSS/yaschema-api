@@ -1,20 +1,8 @@
 import { schema } from 'yaschema';
 
 import { makeHttpApi } from '../type-makers/make-http-api.js';
+import { anyReqBodySchema, anyReqHeadersSchema, anyReqParamsSchema, anyReqQuerySchema } from '../types/any-request-schemas.js';
 import { checkRequestValidation } from '../utils/check-request-validation.js';
-
-const anyStringSerializableTypeSchema = schema.oneOf3(
-  schema.number().setAllowedSerializationForms(['number', 'string']),
-  schema.boolean().setAllowedSerializationForms(['boolean', 'string']),
-  schema.string().allowEmptyString()
-);
-
-const anyReqHeadersSchema = schema.record(schema.string(), anyStringSerializableTypeSchema).optional();
-const anyReqParamsSchema = schema.record(schema.string(), anyStringSerializableTypeSchema).optional();
-const anyReqQuerySchema = schema
-  .record(schema.string(), schema.oneOf(anyStringSerializableTypeSchema, schema.array({ items: anyStringSerializableTypeSchema })))
-  .optional();
-const anyReqBodySchema = schema.any().allowNull().optional();
 
 const api = makeHttpApi({
   method: 'POST',

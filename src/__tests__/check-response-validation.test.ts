@@ -1,17 +1,8 @@
 import { schema } from 'yaschema';
 
 import { makeHttpApi } from '../type-makers/make-http-api.js';
+import { anyResBodySchema, anyResHeadersSchema, anyResStatusSchema } from '../types/any-response-schema.js';
 import { checkResponseValidation } from '../utils/check-response-validation.js';
-
-const anyStringSerializableTypeSchema = schema.oneOf3(
-  schema.number().setAllowedSerializationForms(['number', 'string']),
-  schema.boolean().setAllowedSerializationForms(['boolean', 'string']),
-  schema.string().allowEmptyString()
-);
-
-const anyResStatusSchema = schema.number();
-const anyResHeadersSchema = schema.record(schema.string(), anyStringSerializableTypeSchema).optional();
-const anyResBodySchema = schema.any().allowNull().optional();
 
 const api = makeHttpApi({
   method: 'POST',
