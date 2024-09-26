@@ -1,1 +1,1 @@
-export type AnyStringSerializableType = string | number | boolean;
+export type AnyStringSerializableType = string | number | boolean | { isStringSerializable: true };
