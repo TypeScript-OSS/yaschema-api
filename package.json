@@ -1,6 +1,6 @@
 {
   "name": "yaschema-api",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "description": "Yet another API",
   "keywords": [
     "schema",
@@ -33,7 +33,7 @@
     "test:unit-tests": "yarn test:unit-tests: src"
   },
   "dependencies": {
-    "yaschema": "^4.2.0"
+    "yaschema": "^4.2.1"
   },
   "devDependencies": {
     "@eslint/compat": "1.2.2",
@@ -41,8 +41,8 @@
     "@eslint/js": "9.14.0",
     "@types/jest": "^29.5.14",
     "@types/lodash": "4.17.13",
-    "@typescript-eslint/eslint-plugin": "^8.13.0",
-    "@typescript-eslint/parser": "^8.13.0",
+    "@typescript-eslint/eslint-plugin": "^8.14.0",
+    "@typescript-eslint/parser": "^8.14.0",
     "esbuild": "0.24.0",
     "esbuild-plugin-tsc": "0.4.0",
     "eslint": "9.14.0",
