@@ -9,6 +9,7 @@ export * from './AnyStringSerializableType.js';
 export * from './Api.js';
 export * from './ApiRequest.js';
 export * from './ApiResponse.js';
+export * from './ApiRoutingContext.js';
 export * from './CachePolicy.js';
 export * from './GenericApiRequest.js';
 export * from './GenericApiResponse.js';
