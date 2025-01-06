@@ -3,6 +3,9 @@ import { makeApiRoutingContext } from '../types/ApiRoutingContext.js';
 
 const globalDefaultApiRoutingContext = makeApiRoutingContext();
 
+/** Gets the default API routing context */
+export const getDefaultApiRoutingContext = () => globalDefaultApiRoutingContext;
+
 /** Removes the URL base configuration for the specified route type, which will cause the default URL base to be used unless a subsequent
  * reconfiguration is made for the specified route type */
 export const clearUrlBaseForRouteType = (
