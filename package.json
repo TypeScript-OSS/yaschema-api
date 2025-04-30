@@ -1,6 +1,6 @@
 {
   "name": "yaschema-api",
-  "version": "4.1.10",
+  "version": "5.0.0",
   "description": "Yet another API",
   "keywords": [
     "schema",
@@ -34,7 +34,7 @@
     "test:unit-tests": "yarn test:unit-tests: src"
   },
   "dependencies": {
-    "yaschema": "^4.4.5"
+    "yaschema": "^5.0.0"
   },
   "devDependencies": {
     "@eslint/compat": "1.2.8",

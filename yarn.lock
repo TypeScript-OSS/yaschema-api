@@ -5636,10 +5636,10 @@ yargs@^17.3.1:
     y18n "^5.0.5"
     yargs-parser "^21.1.1"
 
-yaschema@^4.4.5:
-  version "4.4.5"
-  resolved "https://registry.yarnpkg.com/yaschema/-/yaschema-4.4.5.tgz#de1158fa67c13722349949723d996472012710a6"
-  integrity sha512-n4EFcNMGSZwo9/pTG1/lzRSclV0LzNkKFnab+z9voPBIVXjZd/bwFM6Nz3XlhDeb/p9tWXEepvJ9ceLrjYQo9Q==
+yaschema@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/yaschema/-/yaschema-5.0.0.tgz#c4f19a190a1c6b7fe513ba92ee547b56cd7e9673"
+  integrity sha512-DTv95Tqd9KaOFSL4VKsiextRbcJYTLIl1Brd5IYryBx3ooFFxEm3xQugtfFcCVDyfP73TxnwrZW2KK+fObTt6Q==
   dependencies:
     is-promise "4.0.0"
     lodash "^4.17.21"
